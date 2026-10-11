@@ -1,23 +1,63 @@
-<html>
-    <body style="display: flex;justify-content: center;align-items: center;height: 100vh;">
-        <div style="border: 2px solid black;padding: 20px;width: 400px;text-align: left;font-family: arial;">
-             <h1>Formulaire:</h1>
-             <form>
-                <strong>votre nom:</strong>
-                <input type="text" name="nom" size="20"><br><br>
-                <strong>votre prenom:</strong>
-                <input type="text" name="prenom" size="20"><br><br>
-                <strong>votre email:</strong>
-                <input type="text" name="email" size="20"><br><br>
-                <strong>Donner votre message:</strong>
-                <textarea name="impress" rows="5" cols="30"></textarea><br><br>
-                <input type="submit" value="envoyer" size="20">
-
-             </form>   
-            <a href="index.html">retour</a>
-
-        </div>
-
-
-     </body>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact – Anasse Dagdague</title>
+<style>
+:root{--bg:#f3f5f9;--ink:#16213a;--muted:#5b6478;--line:#d9dee8;--accent:#2f5bea;--card:#fff}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Plus Jakarta Sans","Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+header{background:var(--card);border-bottom:1px solid var(--line)}
+nav{max-width:960px;margin:auto;padding:16px 24px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+nav .logo{font-weight:800;margin-right:auto;color:var(--ink);text-decoration:none}
+nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.95rem;padding:4px 0;border-bottom:2px solid transparent}
+nav a:hover,nav a[aria-current]{color:var(--ink);border-color:var(--accent)}
+main{max-width:640px;margin:40px auto;padding:0 24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:32px}
+h1{font-size:clamp(1.8rem,4vw,2.4rem);line-height:1.15;margin:0 0 8px;letter-spacing:-.02em}
+.intro{color:var(--muted);margin:0 0 24px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-weight:600;font-size:.92rem;margin-bottom:6px}
+.field{margin-bottom:18px}
+input,textarea{width:100%;font:inherit;color:var(--ink);padding:11px 14px;border:1px solid var(--line);border-radius:8px;background:#fff}
+textarea{resize:vertical;min-height:140px}
+input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+input:focus,textarea:focus{border-color:var(--accent)}
+button{font:inherit;font-weight:700;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:12px 26px;cursor:pointer}
+button:hover{background:#2449c4}
+.back{display:inline-block;margin-top:24px;color:var(--accent);font-weight:600;text-decoration:none}
+.back:hover{text-decoration:underline}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:32px 24px}
+@media(max-width:560px){.row{grid-template-columns:1fr}.card{padding:24px}}
+</style>
+</head>
+<body>
+<header>
+  <nav aria-label="Navigation principale">
+    <a class="logo" href="index.html">Anasse Dagdague</a>
+    <a href="index.html">Accueil</a>
+    <a href="presentation.html">Présentation</a>
+    <a href="loisirs.html">Loisirs</a>
+    <a href="contact.html" aria-current="page">Contact</a>
+  </nav>
+</header>
+<main>
+  <section class="card">
+    <h1>Contact</h1>
+    <p class="intro">Remplissez ce formulaire pour m'écrire et échanger des expériences.</p>
+    <form>
+      <div class="row">
+        <div class="field"><label for="nom">Nom</label><input id="nom" type="text" name="nom" autocomplete="family-name" required></div>
+        <div class="field"><label for="prenom">Prénom</label><input id="prenom" type="text" name="prenom" autocomplete="given-name" required></div>
+      </div>
+      <div class="field"><label for="email">Adresse e-mail</label><input id="email" type="email" name="email" autocomplete="email" required></div>
+      <div class="field"><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
+      <button type="submit">Envoyer le message</button>
+    </form>
+    <a class="back" href="index.html">← Retour à l'accueil</a>
+  </section>
+</main>
+<footer>© 2026 Anasse Dagdague</footer>
+</body>
 </html>
