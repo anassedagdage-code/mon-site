@@ -1,14 +1,64 @@
-<html>
-    <head></head>
-    <body style="display: flex;justify-content: center;align-items: center;height: 100vh;">
-        <div style="border: 2px solid black;padding: 20px;width: 400px;text-align: left;font-family: arial;">
-        <h1>presentation:</h1>
-        <p><strong>votre nom complet:</strong> ANASSE DAGDAGUE</p>
-        <p><strong>Niveau scolaire:</strong> premier annee de université</p>
-        <p><strong>filier:</strong> informatique appliquee</p>
-        <p><strong>mon description:</strong><ul>Je suis une personne motivée, sérieuse et toujours prête à apprendre de nouvelles choses. J’aime travailler en équipe comme de manière autonome, et je m’adapte facilement à différents environnements. Je suis organisé, ponctuel et j’accorde une grande importance à la qualité du travail que je fournis.</ul></p>
-        <p><strong >Mes competences:</strong><ul><li>joueur de football</li><li>swiming</li><li>progammeur</li></ul></p>
-        <a href="index.html" >retour</a>
-        </div>
-    </body>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Présentation – Anasse Dagdague</title>
+<style>
+:root{--bg:#f3f5f9;--ink:#16213a;--muted:#5b6478;--line:#d9dee8;--accent:#2f5bea;--card:#fff}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Plus Jakarta Sans","Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+header{background:var(--card);border-bottom:1px solid var(--line)}
+nav{max-width:960px;margin:auto;padding:16px 24px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+nav .logo{font-weight:800;margin-right:auto;color:var(--ink);text-decoration:none}
+nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.95rem;padding:4px 0;border-bottom:2px solid transparent}
+nav a:hover,nav a[aria-current]{color:var(--ink);border-color:var(--accent)}
+main{max-width:760px;margin:40px auto;padding:0 24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:32px}
+h1{font-size:clamp(1.8rem,4vw,2.4rem);line-height:1.15;margin:0 0 24px;letter-spacing:-.02em}
+h2{font-size:1.1rem;margin:32px 0 10px}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:10px 28px;margin:0}
+dt{color:var(--muted);font-weight:600}
+dd{margin:0;font-weight:600}
+p{margin:0;color:#2c3752}
+ul.chips{list-style:none;display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:0}
+.chips li{background:#e8edfd;color:#1d3fa8;font-weight:600;font-size:.92rem;padding:6px 14px;border-radius:999px}
+.back{display:inline-block;margin-top:32px;color:var(--accent);font-weight:600;text-decoration:none}
+.back:hover{text-decoration:underline}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:32px 24px}
+@media(max-width:560px){dl{grid-template-columns:1fr;gap:2px}dd{margin-bottom:12px}.card{padding:24px}}
+</style>
+</head>
+<body>
+<header>
+  <nav aria-label="Navigation principale">
+    <a class="logo" href="index.html">Anasse Dagdague</a>
+    <a href="index.html">Accueil</a>
+    <a href="presentation.html" aria-current="page">Présentation</a>
+    <a href="loisirs.html">Loisirs</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<main>
+  <article class="card">
+    <h1>Présentation</h1>
+    <dl>
+      <dt>Nom complet</dt><dd>Anasse Dagdague</dd>
+      <dt>Niveau scolaire</dt><dd>1re année d'université</dd>
+      <dt>Filière</dt><dd>Informatique appliquée</dd>
+    </dl>
+    <h2>À propos de moi</h2>
+    <p>Je suis une personne motivée, sérieuse et toujours prête à apprendre de nouvelles choses. J'aime travailler en équipe comme de manière autonome, et je m'adapte facilement à différents environnements. Je suis organisé, ponctuel et j'accorde une grande importance à la qualité du travail que je fournis.</p>
+    <h2>Mes compétences</h2>
+    <ul class="chips">
+      <li>Football</li>
+      <li>Natation</li>
+      <li>Programmation</li>
+    </ul>
+    <a class="back" href="index.html">← Retour à l'accueil</a>
+  </article>
+</main>
+<footer>© 2026 Anasse Dagdague</footer>
+</body>
 </html>
